@@ -162,7 +162,12 @@ def sum_numbers(numbers):
         0
     """
 
-    return None
+    total = 0
+
+    for x in numbers:
+        total += x
+
+    return total
 
 
 def mult_numbers(numbers):
