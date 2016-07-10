@@ -38,7 +38,8 @@ def long_words(words):
         []
     """
 
-    return ['the wrong thing']
+    four_letter_words = [wordy for wordy in words if len(wordy) > 4]
+    return four_letter_words
 
 
 def n_long_words(words, n):
@@ -56,7 +57,8 @@ def n_long_words(words, n):
         ['apples', 'bananas']
     """
 
-    return ['the wrong thing']
+    nth_letter = [wordy for wordy in words if len(wordy) > n]
+    return nth_letter
 
 
 def smallest_int(numbers):
@@ -78,7 +80,11 @@ def smallest_int(numbers):
         True
     """
 
-    return 100
+    if numbers != []:
+        numbers.sort()
+        return numbers[0]
+    else:
+        return None
 
 
 def largest_int(numbers):
@@ -100,7 +106,11 @@ def largest_int(numbers):
         True
     """
 
-    return 0
+    if numbers != []:
+        numbers.sort()
+        return numbers[-1]
+    else:
+        return None
 
 
 def halvesies(numbers):
