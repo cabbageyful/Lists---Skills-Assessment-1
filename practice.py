@@ -190,7 +190,12 @@ def mult_numbers(numbers):
         1
     """
 
-    return None
+    total = 1
+
+    for x in numbers:
+        total *= x
+
+    return total
 
 
 def join_strings(words):
