@@ -88,9 +88,9 @@ def foods_in_common(foods1, foods2):
     for food in shared_foods:
         fave_foods.append(food)     # adding shared foods to empty list
 
-    fave_foods.sort()
+    fave_foods.sort()               # to alpha-sort list
 
-    return fave_foods       # returns alpha-sorted list of foods in common
+    return fave_foods
 
 
 def every_other_item(items):
@@ -107,7 +107,7 @@ def every_other_item(items):
        ['you', 'are', 'good', 'at', 'code']
     """
 
-    return ['the wrong thing']
+    return items[::2]
 
 
 def largest_n_items(items, n):
@@ -132,7 +132,12 @@ def largest_n_items(items, n):
         [3, 3]
     """
 
-    return []
+    items.sort()  # sorts list in ascending order
+
+    x = len(items) - n   # find position to start slice
+    y = len(items)       # it's 1 past last index pos, goes to end of list
+
+    return items[x:y]
 
 
 #####################################################################
