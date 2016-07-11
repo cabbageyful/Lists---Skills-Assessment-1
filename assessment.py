@@ -78,7 +78,19 @@ def foods_in_common(foods1, foods2):
 
     """
 
-    return ['the wrong thing']
+    foods1_set = {food for food in foods1}
+    foods2_set = {food for food in foods2}   # unpacking each list into set
+
+    shared_foods = foods1_set & foods2_set    # finds intersection of foods
+
+    fave_foods = []                 # creating empty list to enable sorting
+
+    for food in shared_foods:
+        fave_foods.append(food)     # adding shared foods to empty list
+
+    fave_foods.sort()
+
+    return fave_foods       # returns alpha-sorted list of foods in common
 
 
 def every_other_item(items):
