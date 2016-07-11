@@ -320,10 +320,10 @@ def reverse_list_in_place(items):
         >>> orig = ["cookies", "love", "I"]
         >>> reverse_list_in_place(orig)
         >>> orig
-        ['I', 'love', 'cookies']
+
     """
 
-    return []
+    items = reverse_list(items)
 
 
 def duplicates(items):
@@ -352,7 +352,11 @@ def duplicates(items):
         ['apple', 'apple', 'berry']
     """
 
-    return []
+    doubles = []
+    for i in items:
+        if i == i:
+            doubles.append(i)
+    return doubles
 
 
 def find_letter_indices(words, letter):
