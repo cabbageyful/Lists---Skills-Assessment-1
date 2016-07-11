@@ -243,7 +243,12 @@ def average(numbers):
     a feel free to provide a good solution here.)
     """
 
-    return 0
+    total = 0
+    for x in numbers:
+        total += float(x)
+        mean = float(total) / len(numbers)
+
+    return mean
 
 
 def join_strings_with_comma(words):
